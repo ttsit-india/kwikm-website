@@ -1,0 +1,96 @@
+Please add  a professional Customized  Solar Calculator Web Application 
+
+Tech Stack:
+- Frontend: HTML, CSS, JavaScript (Vanilla)
+- Backend: Node.js with Express
+- Use clean responsive UI
+- No database required (basic version)
+- All calculation should happen server-side
+
+Project Name: Commercial Solar Calculator
+
+---------------------------------------
+FEATURE REQUIREMENTS
+---------------------------------------
+
+Create a web form with the following fields:
+
+1. Customer Name (text)
+2. Mobile No (text)
+3. Solar Plant Size in kW (number)
+4. Inverter Type (dropdown)
+   - Hybrid
+   - Ongrid
+   - Offgrid
+5. Inverter Size in kW (number)
+6. Battery Type (dropdown)
+   - Lead Acid
+   - Lithium
+7. Lead Acid Quantity (number)
+8. Lithium kW (number)
+
+---------------------------------------
+COST MASTER (Hardcoded in Backend)
+---------------------------------------
+
+Solar Panel Rate = 21000 per kW
+Hybrid Inverter = 23800 per kW
+Ongrid Inverter = 7000 per kW
+Offgrid Inverter = 10000 per kW
+Lead Acid Battery = 12000 per unit
+Lithium Battery = 15000 per kW
+Installation Cost = 10000 per kW
+
+---------------------------------------
+CALCULATION LOGIC
+---------------------------------------
+
+Solar Panel Cost = Solar Plant Size × 21000
+
+Inverter Cost:
+If Hybrid → Inverter Size × 23800
+If Ongrid → Inverter Size × 7000
+If Offgrid → Inverter Size × 10000
+
+Battery Cost:
+If Lead Acid → Quantity × 12000
+If Lithium → kW × 15000
+
+Installation Cost = Solar Plant Size × 10000
+
+Total Project Cost =
+Solar Panel Cost +
+Inverter Cost +
+Battery Cost +
+Installation Cost
+
+---------------------------------------
+OUTPUT
+---------------------------------------
+
+After clicking "Calculate":
+
+Display a professional result card showing:
+
+Customer Name
+Solar Plant Size (kW)
+Inverter Type + kW
+Battery Details
+Solar Panel Cost
+Inverter Cost
+Battery Cost
+Installation Cost
+Total Project Cost (Highlighted)
+
+---------------------------------------
+EXTRA FEATURES
+---------------------------------------
+
+- Clean modern UI
+- Responsive layout
+- Add currency formatting ₹
+- Add "Download as PDF" button
+- Use proper validation
+- Hide battery fields dynamically based on selection
+- Show battery fields only when required
+- Prevent negative numbers
