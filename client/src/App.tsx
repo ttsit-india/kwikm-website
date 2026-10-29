@@ -12,6 +12,7 @@ import WhyKwikm from "@/pages/WhyKwikm";
 import BookConsultation from "@/pages/BookConsultation";
 import CustomizedCalculator from "@/pages/CustomizedCalculator";
 import MyReferrals from "@/pages/MyReferrals";
+import KwikmCharge from "@/pages/KwikmCharge";
 import ChatWidget from "@/components/ChatWidget";
 import FloatingContacts from "@/components/FloatingContacts";
 
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/why-kwikm" component={WhyKwikm} />
       <Route path="/book-consultation" component={BookConsultation} />
       <Route path="/my-referrals" component={MyReferrals} />
+      <Route path="/kwikm-charge" component={KwikmCharge} />
       <Route component={NotFound} />
     </Switch>
   );

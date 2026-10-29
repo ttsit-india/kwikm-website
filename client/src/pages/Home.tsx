@@ -1,7 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { KwikmChargeTeaser } from "@/components/KwikmChargeTeaser";
 import { Features } from "@/components/Features";
 import { About } from "@/components/About";
+import { MyTeam } from "@/components/MyTeam";
 
 import { Expertise } from "@/components/Expertise";
 import { Presence } from "@/components/Presence";
@@ -19,9 +21,11 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <KwikmChargeTeaser />
       <ReferEarn />
       <Features />
       <About />
+      <MyTeam />
       <Expertise />
       <Presence />
       <StateProgress />

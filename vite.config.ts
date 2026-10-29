@@ -35,6 +35,10 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  // Load .env* from the project root (where this config lives) too — by
+  // default Vite only reads them from `root` (client/), so an .env.local at
+  // the repo root would be silently ignored.
+  envDir: path.resolve(import.meta.dirname),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
@@ -44,9 +48,12 @@ export default defineConfig({
     port: 5000,
     proxy: {
       "/api": {
-        target: process.env.NODE_ENV === "production" 
-          ? "https://api.kwikm.in" 
-          : "http://localhost:3000",
+        // Local dev talks to the kwikm-api NestJS instance on 5181; prod
+        // still routes to api.kwikm.in. Override with API_PROXY_TARGET when
+        // running the API on a different port locally.
+        target: process.env.NODE_ENV === "production"
+          ? "https://api.kwikm.in"
+          : process.env.API_PROXY_TARGET || "http://localhost:5181",
         changeOrigin: true,
         secure: false,
       },

@@ -71,7 +71,7 @@ export default function BookConsultation() {
   };
 
   const handleCallNow = () => {
-    window.location.href = "tel:+919876543210";
+    window.location.href = "tel:+917080853434";
   };
 
   if (isSubmitted) {

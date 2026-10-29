@@ -66,11 +66,9 @@ export default function ChatWidget() {
         initialMessage: 'User started chat interaction'
       };
 
-      await fetch('/api/leads/chat-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(chatLeadData)
-      });
+      // Goes to the CRM API, not this site's own origin — the relative URL
+      // used to fall through to the SPA and the lead was never recorded.
+      await apiClient.post('/leads/chat-lead', chatLeadData);
     } catch (error) {
       console.error('Failed to create chat lead:', error);
     }

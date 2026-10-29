@@ -89,6 +89,7 @@ export function Footer() {
               <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Demat Account</a></li>
               <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Insurance</a></li>
               <li><a href="/subsidy-calculator" className="text-slate-400 hover:text-white transition-colors">Solar Subsidy Portal</a></li>
+              <li><Link href="/kwikm-charge" className="text-slate-400 hover:text-white transition-colors">EV Fast Charging</Link></li>
             </ul>
           </div>
 
@@ -98,6 +99,7 @@ export function Footer() {
               <li><Link href="/" className="text-slate-400 hover:text-white transition-colors">Home</Link></li>
               <li><Link href="/join" className="text-slate-400 hover:text-white transition-colors">Join Now Free</Link></li>
               <li><Link href="/subsidy-calculator" className="text-slate-400 hover:text-white transition-colors">Subsidy Calculator</Link></li>
+              <li><Link href="/kwikm-charge" className="text-slate-400 hover:text-white transition-colors">KwikM Charge</Link></li>
               <li><a href="https://kwikm.in" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center gap-1">Official Site <ExternalLink className="h-3 w-3" /></a></li>
             </ul>
           </div>

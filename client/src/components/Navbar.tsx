@@ -16,6 +16,8 @@ export function Navbar() {
     { href: "#contact", label: "Contact" },
     { href: "/career", label: "Career", isRoute: true },
     { href: "/why-kwikm", label: "Why KwikM Solar", isRoute: true },
+    // The EV charging business: its own page, coloured like its logo.
+    { href: "/kwikm-charge", label: "KwikM Charge", isRoute: true, highlight: true },
   ];
 
   return (
@@ -35,7 +37,11 @@ export function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors whitespace-nowrap px-2"
+                className={
+                  "highlight" in link && link.highlight
+                    ? "text-[13px] font-bold whitespace-nowrap px-2 bg-gradient-to-r from-[#ff1fae] to-[#1ec8ff] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+                    : "text-[13px] font-medium text-muted-foreground hover:text-primary transition-colors whitespace-nowrap px-2"
+                }
               >
                 {link.label}
               </Link>
@@ -78,7 +84,11 @@ export function Navbar() {
                     <Link
                       key={link.label}
                       href={link.href}
-                      className="text-lg font-medium hover:text-primary transition-colors"
+                      className={
+                        "highlight" in link && link.highlight
+                          ? "text-lg font-bold bg-gradient-to-r from-[#ff1fae] to-[#1ec8ff] bg-clip-text text-transparent"
+                          : "text-lg font-medium hover:text-primary transition-colors"
+                      }
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
